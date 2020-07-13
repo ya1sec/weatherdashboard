@@ -1,0 +1,33 @@
+* {
+  background-color: black;
+  color: white;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.container {
+  padding: 20px;
+  width: 80%;
+  max-width: 80%;
+}
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.zipcode {
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border: 0.1px dashed white;
+}
