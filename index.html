@@ -3,25 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Dashboard</title>
+    <title>Weather Forecast</title>
+    <!-- CSS only -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="fonts.css" />
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="container w-80 center">
-      <h1 class="center title helvetica">WEATHER DASHBOARD</h1>
-      <input
-        type="text"
-        id="zipcode"
-        class="zipcode fl w-20 center"
-        placeholder="Enter your zipcode"
-      />
+    <!-- As a heading -->
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Enter your zipcode"
+          aria-label="Search"
+        />
+        <button class="btn my-2 my-sm-0" type="submit">
+          Search
+        </button>
+      </form>
+      <span id="weatherapplogo" class="navbar-brand mb-5 h1"
+        >Weather Dashboard</span
+      >
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <ol class="cities">
+            <li class="cities">past cities</li>
+            <li class="cities">past cities</li>
+            <li class="cities">past cities</li>
+            <li class="cities">past cities</li>
+            <li class="cities">past cities</li>
+            <li class="cities">past cities</li>
+            <li class="cities">past cities</li>
+          </ol>
+        </div>
+        <div class="col-md-7">
+          <div class="card" style="width: 23rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p id="uv-1"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card border-dark mb-2" style="max-width: 12rem;">
+          <div id="date-2" class="card-header">Header</div>
+          <div class="card-body text-dark">
+            <h5 id="temp-2" class="card-title">Dark card title</h5>
+            <p id="icon-2" class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <p id="humidity-2" class="card-text">paragraph 2</p>
+            <p id="uv-2"></p>
+          </div>
+        </div>
+        <div class="card border-dark mb-2" style="max-width: 12rem;">
+          <div id="date-3" class="card-header">Header</div>
+          <div class="card-body text-dark">
+            <h5 id="temp-3" class="card-title">Dark card title</h5>
+            <p id="icon-3" class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <p id="humidity-3" class="card-text">paragraph 2</p>
+            <p id="uv-3"></p>
+          </div>
+        </div>
+        <div class="card border-dark mb-2" style="max-width: 12rem;">
+          <div id="date-4" class="card-header">Header</div>
+          <div class="card-body text-dark">
+            <h5 id="temp-4" class="card-title">Dark card title</h5>
+            <p id="icon-4" class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <p id="humidity-4" class="card-text">paragraph 2</p>
+            <p id="uv-4"></p>
+          </div>
+        </div>
+        <div class="card border-dark mb-2" style="max-width: 12rem;">
+          <div id="date-5" class="card-header">Header</div>
+          <div class="card-body text-dark">
+            <h5 id="temp-5" class="card-title">Dark card title</h5>
+            <p id="icon-5" class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <p id="humidity-5" class="card-text">paragraph 2</p>
+            <p id="uv-5"></p>
+          </div>
+        </div>
+        <div class="card border-dark mb-2" style="max-width: 12rem;">
+          <div id="date-6" class="card-header">Header</div>
+          <div class="card-body text-dark">
+            <h5 id="temp-6" class="card-title">Dark card title</h5>
+            <p id="icon-6" class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <p id="humidity-6" class="card-text">paragraph 2</p>
+            <p id="uv-6"></p>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
 
