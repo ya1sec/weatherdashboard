@@ -39,8 +39,17 @@ hr {
   font-size: 20px;
 }
 
-img {
+.icon {
   max-width: 50px;
+}
+
+.home {
+  padding: 20px;
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .searchbar {

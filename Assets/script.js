@@ -1,6 +1,10 @@
 var searchHistory = [];
 
 $(".btn-sub").on("click", function () {
+  $(".container-1").removeClass("hide");
+  $(".card-container").removeClass("hide");
+  $(".home").addClass("hide");
+
   displayWeather();
   updateHistory();
 });
@@ -14,6 +18,7 @@ function updateHistory() {
   newBtn.attr("data-name", cityText);
   $(".cities").append(newLi);
   newLi.append(newBtn.text(cityText));
+  localStorage.setItem(searchHistory);
   console.log(searchHistory);
 }
 
@@ -165,7 +170,7 @@ function displayWeather() {
     // var time6 = month6 + " " + date6 + ", " + year6;
 
     //NOTE SECOND CARD DATA --------------------
-    $("#date-2").text(new Date(response.list[36].dt * 1000));
+    $("#date-2").text(new Date(response.list[4].dt * 1000));
     //
     $("#icon-2").attr(
       "src",
