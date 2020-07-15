@@ -29,3 +29,29 @@
 hr {
   border: 0.1px dashed white;
 }
+
+.forecast {
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+img {
+  max-width: 50px;
+}
+
+.searchbar {
+  margin-top: 20px;
+}
+
+.city {
+  display: flex;
+  flex-direction: column;
+}
+
+.hide {
+  display: none;
+}
